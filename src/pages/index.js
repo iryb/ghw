@@ -2,7 +2,7 @@ import React from "react"
 
 export default function Home() {
   return <div>
-    <h1>Hello wwww!</h1>
+    <h1>Page header</h1>
     <img src="https://source.unsplash.com/random/400x200" alt="" />
   </div>
 }
