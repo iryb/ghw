@@ -1,12 +1,13 @@
 import React from "react"
 import Layout from "../components/layout";
+import { graphql } from "gatsby"
 
 
-export default function About() {
+export default function About({ data }) {
     return (
         <Layout>
             <div>
-                <h1>About me</h1>
+                <h1>About {data.site.siteMetadata.title}</h1>
                 <p>
                     I’m good enough, I’m smart enough, and gosh darn it, people like me!
                 </p>
@@ -14,3 +15,13 @@ export default function About() {
         </Layout>
     )
 }
+
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
